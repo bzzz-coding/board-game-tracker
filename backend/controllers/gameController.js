@@ -10,7 +10,11 @@ const getGames = (req, res) => {
 // @route POST /api/games
 // @access Private
 const addGame = (req, res) => {
-  console.log(req.body)
+  if (!req.body.text) {
+    // client error
+    res.status(400)
+    throw new Error('Please add a text field')
+  }
   res.status(200).json({message: 'Add game'})
 }
 
