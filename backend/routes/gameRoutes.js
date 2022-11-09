@@ -1,20 +1,13 @@
 const express = require('express')
+const { getGames, addGame, updateGame, deleteGame } = require('../controllers/gameController')
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  res.status(200).json({message: 'Get games'})
-})
+router.get('/', getGames)
 
-router.post('/', (req, res) => {
-  res.status(200).json({message: 'Add game'})
-})
+router.post('/', addGame)
 
-router.put('/:id', (req, res) => {
-  res.status(200).json({message: `Update game ${req.params.id}`})
-})
+router.put('/:id', updateGame)
 
-router.delete('/:id', (req, res) => {
-  res.status(200).json({message: `Delete game ${req.params.id}`})
-})
+router.delete('/:id', deleteGame)
 
 module.exports = router
