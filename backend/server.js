@@ -5,7 +5,7 @@ const port = process.env.PORT || 2000
 const app = express()
 
 app.get('/api/games', (req, res) => {
-  res.send('Get games')
+  res.status(200).json({message: 'Get games'})
 })
 
 app.listen(port, () => console.log(`Server started on port ${port}`))
