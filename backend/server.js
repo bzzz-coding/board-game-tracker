@@ -15,6 +15,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 app.use('/api/games', require('./routes/gameRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 
 // use errorHandler to override the default express error handler
 app.use(errorHandler)
