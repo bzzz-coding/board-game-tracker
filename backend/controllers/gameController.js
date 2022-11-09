@@ -10,6 +10,7 @@ const getGames = (req, res) => {
 // @route POST /api/games
 // @access Private
 const addGame = (req, res) => {
+  console.log(req.body)
   res.status(200).json({message: 'Add game'})
 }
 
