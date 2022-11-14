@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Router>
-        <div className='container mx-auto flex justify-center'>
+        <div className=''>
           <Header />
           <Routes> 
             {/* can only have Route inside Routes */}
