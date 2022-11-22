@@ -16,7 +16,12 @@ function Dashboard() {
   }, [user, navigate])
 
   return (
-    <div>dashboard</div>
+    <>
+      <section className="ml-6">
+        <h1>Welcome {user && user.name}</h1>
+        <p>Your Game Collection</p>
+      </section>
+    </>
   )
 }
 
